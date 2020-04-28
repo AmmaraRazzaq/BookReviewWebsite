@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book Review
+{% endblock %}
+
+{% block body %}
+	<div class="card my-5" style="background-image: url('https://source.unsplash.com/loUlSOXL81c/1120x1600');">
+		<div class="card-body p-5">
+
+			<h2>A List of Possible Matches</h2>
+			<ul>
+				{% for book in books %}
+					<li>
+						<a href="{{url_for('book',book_id=book.id)}}">					
+							<b>Title:</b> {{book.title}} 
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			
+
+			<a class="p-1 mb-2 bg-primary text-white" href="{{url_for('search')}}">Search Again</a>
+		<!-- 	<button class="btn btn-primary" href="{{url_for('login')}}">Search Again</button> -->
+
+		</div>
+	</div>
+
+	
+
+{% endblock %}

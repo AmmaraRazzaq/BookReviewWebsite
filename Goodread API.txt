@@ -1,0 +1,5 @@
+key: D1nwGGgnWb2KeIdtyj0Q
+secret: UvGAa7D9snZuGVboiAQ6qT9SD5FSYf59dkINOVpeWBE
+
+database URL
+postgres://uxqqzyaunrxedo:e25f1db4c5518f15bd2e59e131c82f7226b9faf3ec7a5f65553a9e8ee82cd748@ec2-18-215-99-63.compute-1.amazonaws.com:5432/d4b28kq9mnt2v7

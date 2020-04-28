@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book Info
+{% endblock %}
+
+{% block body %}
+<div class="card my-5" style="background-image: url('https://source.unsplash.com/loUlSOXL81c/1120x1600');">
+	<div class="card-body p-5">
+		<h2>Book Information</h2>
+
+		<p class="lead font-weight-bold">Title</p>
+		{{book.title}}
+
+		<p class="lead font-weight-bold">Author</p>
+		{{book.author}}
+
+		<p class="lead font-weight-bold">Publication Year</p>
+		{{book.year}}
+
+		<p class="lead font-weight-bold">ISBN</p>
+		{{book.isbn}}
+
+		<br>
+		<br>
+
+		<h2>Goodreads Rating</h2>
+
+		<div class="lead">
+			Average Rating: {{avg_rating}} <br>
+			Number of Ratings: {{num_rating}}
+		</div>
+
+		<br><br>
+		<h2>Submit A Review</h2>
+		
+		<form action="{{url_for('book',book_id=book.id)}}" method="post">
+			<p class="lead">Rate this book from 1 to 5 </p>
+			<input type="radio" name="rating" id="one" value="1">
+			<label for="one">1</label>
+			
+			<input type="radio" name="rating" id="two" value="2">
+			<label for="two">2</label>
+			
+			<input type="radio" name="rating" id="three" value="3">
+			<label for="three">3</label>
+			
+			<input type="radio" name="rating" id="four" value="4">
+			<label for="four">4</label>
+			
+			<input type="radio" name="rating" id="five" value="5">
+			<label for="five">5</label>	<br>
+
+			<p class="lead">Comment</p>
+			<textarea name="comment" cols="30" required></textarea>
+			<br><br>
+			<button class="btn btn-primary">Submit</button>
+		</form>
+
+	
+		<h2 class="text-center text-info">User Reviews</h2>
+		<div class="text-info">{{message}}</div>
+		<br>
+
+		{% for review in reviews%}
+			<div class="p-3 mb-2 bg-info text-white">
+				<span class="font-weight-bold">User Email: </span> {{review.user_email}}<br>
+				<span class="font-weight-bold">Rating: </span> {{review.rating}} <br>
+				<span class="font-weight-bold">Comment: </span> {{review.comment}}
+			</div>
+			
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}

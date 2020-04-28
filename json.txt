@@ -1,0 +1,3 @@
+JSON ONJECT RETURNED FROM API
+
+{'books': [{'id': 210329, 'isbn': '1416949658', 'isbn13': '9781416949657', 'ratings_count': 44555, 'reviews_count': 65535, 'text_reviews_count': 1726, 'work_ratings_count': 49264, 'work_reviews_count': 73716, 'work_text_reviews_count': 2318, 'average_rating': '4.07'}]}
