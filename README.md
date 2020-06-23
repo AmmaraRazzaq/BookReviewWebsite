@@ -3,7 +3,7 @@ This is a book review website where users can search and review books.
 
 ## Website Features
 
-1. Users can register and log in.
+1. Create account and log in.
 
 2. Search books from a database of 5000 books using book name, author name or ISBN number.
 
